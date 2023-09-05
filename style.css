@@ -1,4 +1,5 @@
-* {
+*,
+*::before {
   margin: 0;
   padding: 0;
   outline: none;
@@ -44,6 +45,7 @@ body {
   width: 100%;
   font-size: 0.9rem;
   padding: 1rem;
+  margin-bottom: 2rem;
   background-color: rgb(15, 50, 60);
   color: #fff;
   border-radius: 0.8rem;
@@ -58,4 +60,49 @@ body {
 
 .container button:active {
   transform: scale(0.987);
+}
+
+#qrBox {
+  width: 200px;
+  border-radius: 0.8rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+#qrImg {
+  width: 100%;
+  padding: 0.9rem;
+}
+
+#qrBox.show-img {
+  margin: 1rem auto;
+  max-height: 300px;
+  border: 1px solid rgb(15, 50, 60);
+}
+
+#qrText {
+  text-align: center;
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
